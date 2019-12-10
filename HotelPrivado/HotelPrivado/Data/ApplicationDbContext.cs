@@ -13,8 +13,13 @@ namespace HotelPrivado.Data
             : base(options)
         {
         }
+
         public DbSet<HotelPrivado.Models.Tipo> Tipo { get; set; }
         public DbSet<HotelPrivado.Models.Habitacion> Habitacion { get; set; }
         public DbSet<HotelPrivado.Models.Alquiler> Alquiler { get; set; }
+
+        public DbSet<HotelPrivado.Models.Cliente> Cliente { get; set; }
+        public DbSet<HotelPrivado.Models.Vendedor> Vendedor { get; set; }
+
     }
 }
