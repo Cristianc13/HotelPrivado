@@ -50,9 +50,9 @@ namespace HotelPrivado.Controllers
         // GET: Alquilers/Create
         public IActionResult Create()
         {
-            ViewData["idCliente"] = new SelectList(_context.Set<Cliente>(), "idCliente", "idCliente");
-            ViewData["idHabitacion"] = new SelectList(_context.Set<Habitacion>(), "idHabitacion", "idHabitacion");
-            ViewData["idVendedor"] = new SelectList(_context.Set<Vendedor>(), "idVendedor", "idVendedor");
+            ViewData["idCliente"] = new SelectList(_context.Set<Cliente>(), "idCliente", "nombre");
+            ViewData["idHabitacion"] = new SelectList(_context.Set<Habitacion>(), "idHabitacion", "Descripcion");
+            ViewData["idVendedor"] = new SelectList(_context.Set<Vendedor>(), "idVendedor", "nombre");
             return View();
         }
 
@@ -88,9 +88,9 @@ namespace HotelPrivado.Controllers
             {
                 return NotFound();
             }
-            ViewData["idCliente"] = new SelectList(_context.Set<Cliente>(), "idCliente", "idCliente", alquiler.idCliente);
-            ViewData["idHabitacion"] = new SelectList(_context.Set<Habitacion>(), "idHabitacion", "idHabitacion", alquiler.idHabitacion);
-            ViewData["idVendedor"] = new SelectList(_context.Set<Vendedor>(), "idVendedor", "idVendedor", alquiler.idVendedor);
+            ViewData["idCliente"] = new SelectList(_context.Set<Cliente>(), "idCliente", "nombre", alquiler.idCliente);
+            ViewData["idHabitacion"] = new SelectList(_context.Set<Habitacion>(), "idHabitacion", "Descripcion", alquiler.idHabitacion);
+            ViewData["idVendedor"] = new SelectList(_context.Set<Vendedor>(), "idVendedor", "nombre", alquiler.idVendedor);
             return View(alquiler);
         }
 

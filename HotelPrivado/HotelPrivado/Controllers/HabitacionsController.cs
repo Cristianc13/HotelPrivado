@@ -48,7 +48,7 @@ namespace HotelPrivado.Controllers
         // GET: Habitacions/Create
         public IActionResult Create()
         {
-            ViewData["idTipo"] = new SelectList(_context.Tipo, "idTipo", "idTipo");
+            ViewData["idTipo"] = new SelectList(_context.Tipo, "idTipo", "Nombre");
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace HotelPrivado.Controllers
             {
                 return NotFound();
             }
-            ViewData["idTipo"] = new SelectList(_context.Tipo, "idTipo", "idTipo", habitacion.idTipo);
+            ViewData["idTipo"] = new SelectList(_context.Tipo, "idTipo", "Nombre", habitacion.idTipo);
             return View(habitacion);
         }
 
