@@ -52,13 +52,13 @@
                 @Html.DisplayFor(modelItem => item.Observacion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Vendedor.idVendedor)
+                @Html.DisplayFor(modelItem => item.Vendedor.nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cliente.idCliente)
+                @Html.DisplayFor(modelItem => item.Cliente.nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Habitacion.idHabitacion)
+                @Html.DisplayFor(modelItem => item.Habitacion.Descripcion)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.idAlquiler">Edit</a> |
