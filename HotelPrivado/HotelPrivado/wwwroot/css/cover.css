@@ -110,3 +110,9 @@ body {
 .mastfoot {
     color: rgba(255, 255, 255, .5);
 }
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+h3{
+    font-family: 'Pacifico';
+}
