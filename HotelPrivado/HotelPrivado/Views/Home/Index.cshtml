@@ -1,9 +1,82 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
+    <html lang="es">
+    <head>
+        <title>Hotel Premium</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="~/css/EstiloPortada.css">
+    </head>
+    <body>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        <nav>
+            <label class="logo">Hotel Premium</label>
+            <ul>
+                <li><a class="colorboton" href="k">Inicio</a></li>
+                <li><a class="colorboton" href="Identity/Account/Register">Registrate</a></li>
+                <li><a class="colorboton" href="Identity/Account/Login">Iniciar Sesion</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider">
+            <ul>
+                <li><img src="~/img/banner2.png" alt="portada1"></li>
+                <li><img src="~/img/banner.png" alt="portada2"></li>
+                <li><img src="~/img/banner2.png" alt="portada3"></li>
+                <li><img src="~/img/banner.png" alt="portada2"></li>
+            </ul>
+
+        </div>
+
+        <h2>Sobre el Hotel</h2>
+        <div class="container">
+            <div class="card">
+                <img src="~/img/restaurante.jpeg">
+                <h4>Restaurante</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. vel, excepturi unde?</p>
+                <a href="#">Leer Mas</a>
+            </div>
+
+            <div class="card">
+                <img src="~/img/bar2.jpeg">
+                <h4>Bar</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. vel, excepturi unde?</p>
+                <a href="#">Leer Mas</a>
+            </div>
+
+            <div class="card">
+                <img src="~/img/spa.jpeg">
+                <h4>Spa</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. vel, excepturi unde?</p>
+                <a href="#">Leer Mas</a>
+            </div>
+        </div>
+
+        <h2>Ofertas</h2>
+        <div class="container">
+            <div class="card">
+                <img src="~/img/1.jpg">
+                <h4>Habitaciones de Lujo</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. vel, excepturi unde?</p>
+                <a href="#">Leer Mas</a>
+            </div>
+
+            <div class="card">
+                <img src="~/img/1.jpg">
+                <h4>Habitaciones Personales</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. vel, excepturi unde?</p>
+                <a href="#">Leer Mas</a>
+            </div>
+
+            <div class="card">
+                <img src="~/img/1.jpg">
+                <h4>Habitaciones Matrimoniales</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. vel, excepturi unde?</p>
+                <a href="#">Leer Mas</a>
+            </div>
+        </div>
+
+    </body>
+    </html>
