@@ -4,6 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
+<a href="/Panel/Panel">Regresar al Panel</a>
+<p></p>
+
 <h1>Tipo</h1>
 
 <p>
@@ -19,17 +22,18 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.idTipo">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.idTipo">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.idTipo">Eliminar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.idTipo">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.idTipo">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.idTipo">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
