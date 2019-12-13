@@ -2,6 +2,8 @@
 @{
     Layout = null;
 }
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
 
 <!doctype html>
 <html lang="es">
@@ -23,26 +25,51 @@
     <link href="~/css/cover.css" rel="stylesheet">
 </head>
 
+
+
 <body class="text-center">
+    <div class="cover-container d-flex h-100 p-5 mx-auto flex-column">
+        <div class="inner">
+            <nav class="nav nav-masthead text-center">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-            
-            <div class="inner">
-                 <h3> Hotel Premium</h3>
-                <br />
-                <nav class="nav nav-masthead text-center">
-                    
-                    <a class="nav-link" href="/Home/Index">Inicio</a>
-                    <a class="nav-link" href="/Tipoes">Tipo de Habitacion</a>
-                    <a class="nav-link" href="/Habitacions">Habitacion</a>
-                    <a class="nav-link" href="/Vendedors">Vendedor</a>
-                    <a class="nav-link" href="/Clientes">Cliente</a>
-                    <a class="nav-link" href="/Alquilers">Alquiler</a>
-                </nav>
-            </div>
-        </header>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a href="/Home/Index"><h3 class="text-center">Hotel Premium</h3></a>
+                    <a class="nav-link" href="/Home/Index"></a>
+                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hola @User.Identity.Name!</a>
+                    <a class="nav-link" href="/Home/Index"></a>
 
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="nav-link btn btn-link">Cerrar Sesion</button>
+                    </form>
+                }
+                <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                    <div class="inner">
+                        <nav class="nav nav-masthead text-center">
+
+                            <a class="nav-link" href="/Home/Index">Inicio</a>
+                            <a class="nav-link" href="/Tipoes">Tipo de Habitacion</a>
+                            <a class="nav-link" href="/Habitacions">Habitacion</a>
+                            <a class="nav-link" href="/Vendedors">Vendedor</a>
+                            <a class="nav-link" href="/Clientes">Cliente</a>
+                            <a class="nav-link" href="/Alquilers">Alquiler</a>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+
+
+        </div>
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <main role="main" class="inner cover">
             <h1 class="cover-heading">Bienvenido Administrador.</h1>
             <br />
@@ -64,5 +91,12 @@
     <script>window.jQuery || document.write('<script src="~/bootstrap/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="~/bootstrap/assets/js/vendor/popper.min.js"></script>
     <script src="~/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
 </body>
 </html>
