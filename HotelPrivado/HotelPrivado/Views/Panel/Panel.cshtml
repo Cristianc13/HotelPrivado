@@ -36,7 +36,7 @@
                 {
                     <a href="/Home/Index"><h3 class="text-center">Hotel Premium</h3></a>
                     <a class="nav-link" href="/Home/Index"></a>
-                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hola @User.Identity.Name!</a>
+                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hola @User.Identity.Name</a>
                     <a class="nav-link" href="/Home/Index"></a>
 
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -71,7 +71,7 @@
         <br />
         <br />
         <main role="main" class="inner cover">
-            <h1 class="cover-heading">Bienvenido Administrador.</h1>
+            <h1 class="cover-heading">Bienvenido @User.Identity.Name</h1>
             <br />
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </main>
