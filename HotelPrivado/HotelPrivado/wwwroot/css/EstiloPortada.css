@@ -1,11 +1,18 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+﻿
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
 h2 {
     color: white;
+    text-align: center;
 }
 
 h1 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
     color: white;
 }
 
@@ -18,14 +25,17 @@ h1 {
 }
 
 body {
-    background-color: black;
+    background-color: #1c1c1c;
     font-family: 'Arvo';
+    min-height: 100vh;
 }
 
 nav {
-    background: #1c1c1c;
+    background: #151E3D;
     height: 80px;
     width: 100%;
+    top: 0;
+    position: fixed;
 }
 
 label.logo {
@@ -159,3 +169,65 @@ nav ul {
             text-decoration: none;
             color: #3498;
         }
+
+.galeria {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    .galeria li {
+        margin: 5px;
+    }
+
+    .galeria img {
+        width: 200px;
+        height: 200px;
+    }
+
+.contenedir-galeria {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.galeria__img {
+    cursor: pointer;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 30px;
+    object-fit: fill;
+    filter: brightness(70%);
+    animation: escalar 1.5s infinite alternate;
+}
+
+@keyframes escalar {
+    to {
+        transform: scale(1);
+    }
+
+    from {
+        transform: scale(1.05);
+    }
+}
+
+.galeria__img:hover {
+    filter: brightness(100%);
+}
+
+
+footer {
+    align-self: flex-end;
+    background-color: #151E3D;
+    line-height: 3;
+    text-align: center;
+    width: 100%;
+}
